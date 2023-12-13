@@ -1,0 +1,25 @@
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        int[] nums = new int[] { 7,1,5,3,6,4 };
+    
+        int profit = StockBuyAndSell(nums);
+        Console.WriteLine ("Maximum Profit is : {0}", profit);
+    }
+    
+    private static int StockBuyAndSell(int[] nums)
+    {
+        int minPrice = nums[0];
+        int maxProfit = 0;
+        for (int i = 1; i < nums.Length; i++)
+        {
+            minPrice = Math.Min(minPrice, nums[i]);
+            maxProfit = Math.Max(maxProfit, nums[i] - minPrice);
+        }
+        
+        return maxProfit;
+    }
+}
