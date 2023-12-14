@@ -1,0 +1,33 @@
+Depth - first Search of a Binary tree has 3 types
+    -- In Pre-order traversal we need to traverse (Root, Left, Right).
+              // pre-order traversal of binary tree  
+                   void preOrder(BinaryNode node) {  
+                            if (node == null)  
+                               return;  
+                            Console.WriteLine(node.getValue() + " ");  
+                            preOrder(node.getLeft());  
+                            preOrder(node.getRight());  
+                         }//end of method  
+    -- In-Order Traversal Left, Root, Right
+              Code for In-Order Traversal  
+          
+              void inOrder(BinaryNode node) {  
+              if (node == null) {  
+              return;  
+              }  
+              inOrder(node.getLeft());  
+              Console.WriteLine(node.getValue() + " ");  
+              inOrder(node.getRight());  
+              }//end of method  
+    -- For post-order traversal, we need to traverse (Left, Right, Root)
+            //Code for Post-Order traversal   
+  
+void postOrder(BinaryNode node) {  
+            if (node == null)  
+            return;  
+            postOrder(node.getLeft());  
+            postOrder(node.getRight());  
+            Console.WriteLine(node.getValue() + " ");  
+            }//end of method  
+   
+
